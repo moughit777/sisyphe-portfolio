@@ -13,10 +13,7 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 50% 60% at 90% 40%, rgba(93,214,44,0.05) 0%, transparent 55%)' }} />
-
+    <section id="services" className="py-24 relative overflow-hidden bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"
@@ -24,11 +21,11 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#5DD62C', letterSpacing: '0.18em' }}>
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#874AF8', letterSpacing: '0.18em' }}>
             — شنو نقدر نديرلك
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white">
-            الخدمات <span className="text-green-gradient">ديالي</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-ink">
+            الخدمات <span className="text-gradient">ديالي</span>
           </h2>
         </motion.div>
 
@@ -40,15 +37,13 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="card-hover rounded-2xl p-6"
-              style={{ background: 'rgba(14,18,36,0.70)' }}
+              className="card-hover rounded-2xl p-6 bg-bg-soft"
             >
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                style={{ background: 'rgba(93,214,44,0.10)', border: '1px solid rgba(93,214,44,0.25)' }}>
-                <s.icon className="w-6 h-6" style={{ color: '#5DD62C' }} />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-white border border-border">
+                <s.icon className="w-6 h-6" style={{ color: '#874AF8' }} />
               </div>
-              <h3 className="font-black text-white text-base mb-2">{s.title}</h3>
-              <p className="text-sm text-white/40 leading-relaxed">{s.desc}</p>
+              <h3 className="font-black text-ink text-base mb-2">{s.title}</h3>
+              <p className="text-sm text-gray leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

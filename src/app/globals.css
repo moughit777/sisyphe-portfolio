@@ -5,14 +5,18 @@
 @tailwind utilities;
 
 :root {
-  --green:      #5DD62C;
-  --green-dark: #337418;
-  --green-glow: rgba(93,214,44,0.50);
-  --black:      #070B1A;
-  --card:       #0E1230;
-  --border:     rgba(59,130,246,0.18);
-  --white:      #EEF8EE;
-  --gray:       #8AB88A;
+  --purple:      #874AF8;
+  --purple-dark: #4E2A8C;
+  --pink:        #DB8DFF;
+  --magenta:     #941C66;
+  --orange:      #F17422;
+  --gold:        #F7B14E;
+  --ink:         #15111F;
+  --gray:        #6b6b76;
+  --gray-light:  #9ca3af;
+  --bg:          #FCFCFC;
+  --bg-soft:     #F5F5F7;
+  --border:      #EDEDF2;
 }
 
 * { box-sizing: border-box; }
@@ -22,13 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-html { scroll-behavior: smooth; background-color: #070B1A; }
+html { scroll-behavior: smooth; background-color: var(--bg); }
 
 body {
-  background-color: transparent;
-  position: relative;
-  z-index: 1;
-  color: var(--white);
+  background-color: var(--bg);
+  color: var(--ink);
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   direction: rtl;
   -webkit-font-smoothing: antialiased;
@@ -36,67 +38,61 @@ body {
   line-height: 1.6;
 }
 
-::-webkit-scrollbar       { width: 5px; }
-::-webkit-scrollbar-track { background: #111; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-soft); }
+::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; opacity: 0.5; }
 
 .grid-bg {
-  background-image: radial-gradient(circle, rgba(59,130,246,0.10) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: radial-gradient(circle, rgba(135,74,248,0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
 }
 
-.text-green-gradient {
-  background: linear-gradient(90deg, #5DD62C 0%, #7EE84E 100%);
+.sunset-gradient {
+  background: linear-gradient(135deg, #4E2A8C 7%, #941C66 32%, #CD2236 57%, #F17422 75%, #F7B14E 92%);
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #4E2A8C 0%, #874AF8 55%, #DB8DFF 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #4E2A8C 0%, #874AF8 45%, #CD2236 75%, #F17422 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.btn-green {
-  background: var(--green);
-  color: #000;
+.btn-gradient {
+  background: linear-gradient(135deg, #874AF8 0%, #AA32FF 100%);
+  color: #fff;
   font-weight: 700;
   transition: all 0.25s ease;
-  box-shadow: 0 0 0 rgba(93,214,44,0);
+  box-shadow: 0 6px 20px rgba(135,74,248,0.30);
 }
-.btn-green:hover {
-  background: #7EE84E;
-  box-shadow: 0 0 30px rgba(93,214,44,0.5);
+.btn-gradient:hover {
+  box-shadow: 0 10px 30px rgba(135,74,248,0.45);
   transform: translateY(-2px);
 }
 
-.btn-outline-green {
-  border: 1px solid rgba(93,214,44,0.4);
-  color: var(--green);
-  transition: all 0.25s ease;
-}
-.btn-outline-green:hover {
-  background: rgba(93,214,44,0.08);
-  border-color: var(--green);
-  box-shadow: 0 0 20px rgba(93,214,44,0.2);
-}
-
-.card-hover {
-  transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
-  border: 1px solid rgba(93,214,44,0.08);
-}
-.card-hover:hover {
-  border-color: rgba(93,214,44,0.30);
-  box-shadow: 0 0 0 1px rgba(93,214,44,0.12), 0 12px 40px rgba(0,0,0,0.6), 0 0 60px rgba(51,116,24,0.10);
-  transform: translateY(-4px);
-}
-
-.tag-green {
+.tag-purple {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 6px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(93,214,44,0.30);
-  background: linear-gradient(135deg, rgba(51,116,24,0.30) 0%, rgba(93,214,44,0.08) 100%);
-  backdrop-filter: blur(12px);
-  color: #7EE84E;
+  border: 1px solid rgba(135,74,248,0.20);
+  background: rgba(135,74,248,0.06);
+  color: #874AF8;
   font-size: 0.8rem;
-  font-weight: 600;
-  box-shadow: 0 0 20px rgba(93,214,44,0.08), 0 1px 0 rgba(255,255,255,0.06) inset;
+  font-weight: 700;
+}
+
+.card-hover {
+  transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+  border: 1px solid var(--border);
+}
+.card-hover:hover {
+  border-color: rgba(135,74,248,0.25);
+  box-shadow: 0 20px 50px rgba(135,74,248,0.10);
+  transform: translateY(-4px);
 }

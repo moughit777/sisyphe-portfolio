@@ -26,10 +26,9 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="card-hover rounded-2xl overflow-hidden"
-      style={{ background: 'rgba(14,18,36,0.70)' }}
+      className="card-hover rounded-2xl overflow-hidden bg-white"
     >
-      <div className="aspect-video relative bg-black">
+      <div className="aspect-video relative bg-bg-soft">
         {hasVideo ? (
           <iframe
             className="w-full h-full"
@@ -39,21 +38,19 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
             allowFullScreen
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2"
-            style={{ background: 'linear-gradient(135deg, #0d1117 0%, #1c2333 50%, #0d1117 100%)' }}>
-            <div className="w-14 h-14 rounded-full flex items-center justify-center"
-              style={{ background: 'rgba(93,214,44,0.10)', border: '1px solid rgba(93,214,44,0.25)' }}>
-              <Play className="w-6 h-6" style={{ color: '#5DD62C' }} />
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 purple-gradient">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center bg-white/15 border border-white/25">
+              <Play className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xs font-bold text-white/30 flex items-center gap-1">
+            <span className="text-xs font-bold text-white/70 flex items-center gap-1">
               <Clock className="w-3 h-3" /> قريباً
             </span>
           </div>
         )}
       </div>
       <div className="p-4 text-right">
-        <h3 className="font-black text-white text-base mb-1">{work.title}</h3>
-        <p className="text-xs font-bold" style={{ color: '#5DD62C' }}>{work.category}</p>
+        <h3 className="font-black text-ink text-base mb-1">{work.title}</h3>
+        <p className="text-xs font-bold" style={{ color: '#874AF8' }}>{work.category}</p>
       </div>
     </motion.div>
   )
@@ -61,10 +58,7 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
 
 export default function PortfolioGrid() {
   return (
-    <section id="work" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 30%, rgba(93,214,44,0.05) 0%, transparent 70%)' }} />
-
+    <section id="work" className="py-24 relative overflow-hidden bg-bg-soft">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"
@@ -72,11 +66,11 @@ export default function PortfolioGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#5DD62C', letterSpacing: '0.18em' }}>
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#874AF8', letterSpacing: '0.18em' }}>
             — أعمالي
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white">
-            شوف <span className="text-green-gradient">شغلي</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-ink">
+            شوف <span className="text-gradient">شغلي</span>
           </h2>
         </motion.div>
 

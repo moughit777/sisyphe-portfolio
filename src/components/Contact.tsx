@@ -7,10 +7,10 @@ const EMAIL  = 'moughitmoughit777@gmail.com'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-24 relative overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(93,214,44,0.07) 0%, transparent 65%)' }} />
-      <div className="absolute inset-0 grid-bg opacity-20" />
+        style={{ background: 'radial-gradient(ellipse 70% 50% at 50% 60%, rgba(135,74,248,0.06) 0%, transparent 65%)' }} />
+      <div className="absolute inset-0 grid-bg opacity-30" />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -19,13 +19,13 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#5DD62C', letterSpacing: '0.18em' }}>
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#874AF8', letterSpacing: '0.18em' }}>
             — نتواصلو
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
-            عندك مشروع؟ <span className="text-green-gradient">هضر معايا</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-ink mb-4">
+            عندك مشروع؟ <span className="text-gradient">هضر معايا</span>
           </h2>
-          <p className="text-white/40 max-w-md mx-auto mb-10">
+          <p className="text-gray max-w-md mx-auto mb-10">
             رد فوري خلال دقائق، وتقدر تبعت ليا التفاصيل ديال المشروع مباشرة عبر واتساب
           </p>
 
@@ -36,16 +36,9 @@ export default function Contact() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
-              className="relative overflow-hidden flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-lg text-black"
-              style={{ background: '#25D366', boxShadow: '0 8px 32px rgba(37,211,102,0.45)' }}
+              className="btn-gradient flex items-center gap-3 px-10 py-5 rounded-2xl text-lg"
             >
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                style={{ background: 'linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.25) 50%, transparent 65%)', transform: 'skewX(-15deg)' }}
-                animate={{ x: ['-150%', '250%'] }}
-                transition={{ duration: 1.8, repeat: Infinity, repeatDelay: 3.5, ease: 'easeInOut' }}
-              />
-              <MessageCircle className="w-6 h-6 fill-black" />
+              <MessageCircle className="w-6 h-6" />
               تواصل عبر واتساب
               <motion.div animate={{ x: [0, -5, 0] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
                 <ArrowLeft className="w-5 h-5" />
@@ -53,9 +46,8 @@ export default function Contact() {
             </motion.a>
 
             <a href={`mailto:${EMAIL}`}
-              className="flex items-center gap-3 px-8 py-5 rounded-2xl font-bold text-white/70 hover:text-white transition-colors"
-              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)' }}>
-              <Mail className="w-5 h-5" style={{ color: '#5DD62C' }} />
+              className="flex items-center gap-3 px-8 py-5 rounded-2xl font-bold text-ink/70 hover:text-ink transition-colors bg-bg-soft border border-border hover:border-brand-purple/30">
+              <Mail className="w-5 h-5" style={{ color: '#874AF8' }} />
               {EMAIL}
             </a>
           </div>
