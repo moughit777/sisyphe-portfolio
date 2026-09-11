@@ -29,27 +29,27 @@ export default function Contact() {
             رد فوري خلال دقائق، وتقدر تبعت ليا التفاصيل ديال المشروع مباشرة عبر واتساب
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full px-4 sm:px-0">
             <motion.a
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-whatsapp flex items-center gap-3 px-10 py-5 rounded-2xl text-lg"
+              className="btn-whatsapp flex items-center justify-center gap-3 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-lg"
             >
               <motion.div animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
-                <MessageCircle className="w-6 h-6" />
+                <MessageCircle className="w-6 h-6 flex-shrink-0" />
               </motion.div>
               تواصل عبر واتساب
               <motion.div animate={{ x: [0, -5, 0] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
-                <ArrowLeft className="w-5 h-5" />
+                <ArrowLeft className="w-5 h-5 flex-shrink-0" />
               </motion.div>
             </motion.a>
 
             <a href={`mailto:${EMAIL}`}
-              className="flex items-center gap-3 px-8 py-5 rounded-2xl font-bold text-ink/70 hover:text-ink transition-colors bg-bg-soft border border-border hover:border-brand-purple/30">
-              <Mail className="w-5 h-5" style={{ color: '#874AF8' }} />
+              className="flex items-center justify-center gap-2 px-4 sm:px-8 py-4 sm:py-5 rounded-2xl font-bold text-ink/70 hover:text-ink transition-colors bg-bg-soft border border-border hover:border-brand-purple/30 text-sm sm:text-base break-all">
+              <Mail className="w-5 h-5 flex-shrink-0" style={{ color: '#874AF8' }} />
               {EMAIL}
             </a>
           </div>

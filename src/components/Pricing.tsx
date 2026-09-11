@@ -103,7 +103,7 @@ export default function Pricing() {
                 </div>
               )}
 
-              <h3 className="font-black text-xl mb-1 mt-2 relative">{plan.name}</h3>
+              <h3 className="font-black text-lg sm:text-xl mb-1 mt-6 relative">{plan.name}</h3>
               <div className="flex items-baseline gap-1.5 mb-6 relative">
                 <span className="text-4xl font-black">{plan.price}</span>
                 <span className="text-sm font-bold opacity-80">{plan.currency}</span>
