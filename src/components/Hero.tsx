@@ -34,17 +34,10 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <motion.div variants={container} initial="hidden" animate="show">
 
-          <motion.div variants={item} className="flex justify-center mb-6">
-            <div className="tag-purple">
-              <Sparkles className="w-3.5 h-3.5" />
-              مونتير فيديو محترف — Sisyphe
-            </div>
-          </motion.div>
-
-          <motion.h1 variants={item} className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.15] tracking-tight mb-6">
-            <span className="text-ink">نحول أفكارك</span>
+          <motion.h1 variants={item} className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.15] tracking-tight mb-6 text-ink">
+            <span>نحول أفكارك</span>
             <br />
-            <span className="text-gradient">لفيديوهات تشد الأنظار</span>
+            <span>لفيديوهات تشد الأنظار</span>
           </motion.h1>
 
           <motion.p variants={item} className="text-lg sm:text-xl text-gray max-w-xl mx-auto leading-relaxed mb-10">
@@ -66,7 +59,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-gradient relative overflow-hidden flex items-center gap-2.5 px-10 py-4 rounded-2xl text-base"
+              className="btn-whatsapp relative overflow-hidden flex items-center gap-2.5 px-10 py-4 rounded-2xl text-base"
             >
               <MessageCircle className="w-5 h-5" />
               تواصل معايا الآن

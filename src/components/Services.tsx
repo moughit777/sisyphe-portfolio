@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Film, Layers, Smartphone, Wand2, Monitor, Zap } from 'lucide-react'
+import IconBadge from './IconBadge'
 
 const SERVICES = [
   { icon: Film,       title: 'مونتاج فيديو احترافي', desc: 'تحرير، قص، انتقالات، وتوليف فيديوهات بجودة سينمائية بـ Premiere Pro' },
@@ -25,7 +26,7 @@ export default function Services() {
             — شنو نقدر نديرلك
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-ink">
-            الخدمات <span className="text-gradient">ديالي</span>
+            الخدمات ديالي
           </h2>
         </motion.div>
 
@@ -39,8 +40,8 @@ export default function Services() {
               transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="card-hover rounded-2xl p-6 bg-bg-soft"
             >
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-white border border-border">
-                <s.icon className="w-6 h-6" style={{ color: '#874AF8' }} />
+              <div className="mb-4">
+                <IconBadge icon={s.icon} size={48} background="#fff" />
               </div>
               <h3 className="font-black text-ink text-base mb-2">{s.title}</h3>
               <p className="text-sm text-gray leading-relaxed">{s.desc}</p>

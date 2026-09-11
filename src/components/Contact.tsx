@@ -23,7 +23,7 @@ export default function Contact() {
             — نتواصلو
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-ink mb-4">
-            عندك مشروع؟ <span className="text-gradient">هضر معايا</span>
+            عندك مشروع؟ هضر معايا
           </h2>
           <p className="text-gray max-w-md mx-auto mb-10">
             رد فوري خلال دقائق، وتقدر تبعت ليا التفاصيل ديال المشروع مباشرة عبر واتساب
@@ -36,7 +36,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-gradient flex items-center gap-3 px-10 py-5 rounded-2xl text-lg"
+              className="btn-whatsapp flex items-center gap-3 px-10 py-5 rounded-2xl text-lg"
             >
               <MessageCircle className="w-6 h-6" />
               تواصل عبر واتساب

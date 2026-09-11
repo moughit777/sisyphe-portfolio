@@ -39,8 +39,20 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 purple-gradient">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center bg-white/15 border border-white/25">
-              <Play className="w-6 h-6 text-white" />
+            <div className="relative w-14 h-14 rounded-full overflow-hidden flex items-center justify-center bg-white/15 border border-white/25">
+              <motion.div
+                className="absolute inset-y-0 left-0"
+                style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent)' }}
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 5, ease: 'easeInOut' }}
+              />
+              <motion.div
+                className="absolute inset-y-0 right-0"
+                style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent)' }}
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 5, ease: 'easeInOut', delay: 0.15 }}
+              />
+              <Play className="w-6 h-6 text-white relative" />
             </div>
             <span className="text-xs font-bold text-white/70 flex items-center gap-1">
               <Clock className="w-3 h-3" /> قريباً
@@ -70,7 +82,7 @@ export default function PortfolioGrid() {
             — أعمالي
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-ink">
-            شوف <span className="text-gradient">شغلي</span>
+            شوف شغلي
           </h2>
         </motion.div>
 

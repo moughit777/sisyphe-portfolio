@@ -58,7 +58,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-gradient flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm"
+              className="btn-whatsapp flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm"
             >
               <MessageCircle className="w-4 h-4" />
               تواصل معايا
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}
-                className="btn-gradient block mt-2 px-4 py-3 text-center rounded-xl text-sm">
+                className="btn-whatsapp block mt-2 px-4 py-3 text-center rounded-xl text-sm">
                 تواصل معايا
               </a>
             </div>
