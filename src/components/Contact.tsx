@@ -38,7 +38,9 @@ export default function Contact() {
               whileTap={{ scale: 0.97 }}
               className="btn-whatsapp flex items-center gap-3 px-10 py-5 rounded-2xl text-lg"
             >
-              <MessageCircle className="w-6 h-6" />
+              <motion.div animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
+                <MessageCircle className="w-6 h-6" />
+              </motion.div>
               تواصل عبر واتساب
               <motion.div animate={{ x: [0, -5, 0] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
                 <ArrowLeft className="w-5 h-5" />

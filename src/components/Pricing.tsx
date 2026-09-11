@@ -23,7 +23,7 @@ const PLANS = [
     name: 'الباقة المميّزة',
     price: '679',
     currency: 'DH',
-    gradient: 'linear-gradient(135deg, #4E2A8C 0%, #874AF8 50%, #DB8DFF 100%)',
+    gradient: 'linear-gradient(135deg, #941C66 0%, #CD2236 35%, #F17422 70%, #F7B14E 100%)',
     features: [
       'أقل من 60 ثانية',
       'موشن جرافيك كامل',
@@ -55,10 +55,11 @@ export default function Pricing() {
           <p className="text-gray">اختار وخلي المونتاج علينا حنا</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto items-stretch">
           {PLANS.map((plan, i) => (
             <motion.div
               key={plan.name}
+              className="h-full"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3.5 + i * 0.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
             >
@@ -72,7 +73,7 @@ export default function Pricing() {
               whileHover={{ rotate: 0, scale: 1.03, y: -6 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="relative rounded-3xl p-8 text-white overflow-hidden shadow-xl block cursor-pointer"
+              className="relative rounded-3xl p-8 text-white overflow-hidden shadow-xl cursor-pointer h-full flex flex-col"
               style={{ background: plan.gradient }}
             >
               {/* CC light sweep — soft diagonal pass */}
@@ -108,7 +109,7 @@ export default function Pricing() {
                 <span className="text-sm font-bold opacity-80">{plan.currency}</span>
               </div>
 
-              <ul className="space-y-3 mb-8 relative">
+              <ul className="space-y-3 mb-8 relative flex-1">
                 {plan.features.map(f => (
                   <li key={f} className="flex items-start gap-2.5 text-sm font-semibold leading-snug">
                     <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -123,8 +124,10 @@ export default function Pricing() {
                 <p className="text-xs opacity-70 font-semibold mb-6 relative">* {plan.note}</p>
               )}
 
-              <div className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-black text-sm bg-white text-ink relative">
-                <MessageCircle className="w-4 h-4" />
+              <div className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-black text-sm bg-white text-ink relative mt-auto">
+                <motion.div animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
+                  <MessageCircle className="w-4 h-4" />
+                </motion.div>
                 اختار هاد الباقة
               </div>
             </motion.a>

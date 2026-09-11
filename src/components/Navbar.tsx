@@ -60,7 +60,9 @@ export default function Navbar() {
               whileTap={{ scale: 0.97 }}
               className="btn-whatsapp flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm"
             >
-              <MessageCircle className="w-4 h-4" />
+              <motion.div animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
+                <MessageCircle className="w-4 h-4" />
+              </motion.div>
               تواصل معايا
             </motion.a>
           </div>

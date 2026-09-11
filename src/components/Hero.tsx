@@ -61,7 +61,9 @@ export default function Hero() {
               whileTap={{ scale: 0.97 }}
               className="btn-whatsapp relative overflow-hidden flex items-center gap-2.5 px-10 py-4 rounded-2xl text-base"
             >
-              <MessageCircle className="w-5 h-5" />
+              <motion.div animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
+                <MessageCircle className="w-5 h-5" />
+              </motion.div>
               تواصل معايا الآن
               <motion.div animate={{ x: [0, -4, 0] }} transition={{ duration: 1.4, repeat: Infinity }}>
                 <ArrowLeft className="w-5 h-5" />
