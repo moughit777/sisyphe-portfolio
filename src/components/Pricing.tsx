@@ -14,7 +14,7 @@ const PLANS = [
     features: [
       'موسيقى خلفية بلا حقوق',
       'مونتاج نقي (تقطيع، ترتيب، انتقالات ناعمة)',
-      'ريفيزيون وحدة داخلة',
+      '2 تعديلات مجانية',
     ],
     note: '',
     featured: false,
@@ -23,13 +23,13 @@ const PLANS = [
     name: 'الباقة المميّزة',
     price: '679',
     currency: 'DH',
-    gradient: 'linear-gradient(135deg, #941C66 0%, #CD2236 35%, #F17422 70%, #F7B14E 100%)',
+    gradient: 'linear-gradient(135deg, #6B3FD9 0%, #874AF8 50%, #9B6BFF 100%)',
     features: [
       'أقل من 60 ثانية',
       'موشن جرافيك كامل',
       'مؤثرات صوتية',
       'كابشن محسّن متناسق مع الهوية',
-      '3 تعديلات مجانية',
+      '2 تعديلات مجانية',
     ],
     note: 'أي تعديل إضافي يُحتسب منفصلًا',
     featured: true,
@@ -121,7 +121,9 @@ export default function Pricing() {
               </ul>
 
               {plan.note && (
-                <p className="text-xs opacity-70 font-semibold mb-6 relative">* {plan.note}</p>
+                <p className="text-xs font-bold mb-6 relative px-3 py-2 rounded-lg bg-black/20 text-white">
+                  ⚠ {plan.note}
+                </p>
               )}
 
               <div className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-black text-sm bg-white text-ink relative mt-auto">
