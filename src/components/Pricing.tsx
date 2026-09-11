@@ -57,8 +57,12 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {PLANS.map((plan, i) => (
-            <motion.a
+            <motion.div
               key={plan.name}
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3.5 + i * 0.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
+            >
+            <motion.a
               href={WA_URL(plan.name)}
               target="_blank"
               rel="noopener noreferrer"
@@ -124,6 +128,7 @@ export default function Pricing() {
                 اختار هاد الباقة
               </div>
             </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>

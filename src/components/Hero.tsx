@@ -69,7 +69,7 @@ export default function Hero() {
             </motion.a>
 
             <a href="#work"
-              className="flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-ink/70 hover:text-ink transition-colors bg-white border border-border hover:border-brand-purple/30">
+              className="btn-whatsapp flex items-center gap-2 px-8 py-4 rounded-2xl text-base">
               شوف الأعمال ديالي
             </a>
           </motion.div>
