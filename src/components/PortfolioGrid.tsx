@@ -24,8 +24,24 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="card-hover rounded-2xl overflow-hidden bg-white"
+      className="relative card-hover rounded-2xl overflow-hidden bg-white"
     >
+      {/* CC light sweep frame — soft green edges around the video icon */}
+      <div className="absolute inset-0 z-10 rounded-2xl pointer-events-none overflow-hidden">
+        <motion.div
+          className="absolute inset-y-0 left-0"
+          style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.9), transparent)' }}
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 4 + delay, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute inset-y-0 right-0"
+          style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.9), transparent)' }}
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 4 + delay, ease: 'easeInOut', delay: 0.2 }}
+        />
+      </div>
+
       <div className="aspect-[9/16] relative bg-bg-soft">
         {hasVideo ? (
           <iframe
