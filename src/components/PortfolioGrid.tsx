@@ -24,68 +24,48 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="relative card-hover rounded-2xl overflow-hidden bg-white"
-      style={{ boxShadow: '0 0 0 1px rgba(52,211,153,0.35), 0 0 18px rgba(52,211,153,0.18)' }}
+      className="relative card-hover rounded-2xl"
     >
-      {/* CC light sweep frame — soft green edges around the video icon, always faintly on + brighter pulse */}
-      <div className="absolute inset-0 z-10 rounded-2xl pointer-events-none overflow-hidden">
-        <div className="absolute inset-y-0 left-0" style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.45), transparent)' }} />
-        <div className="absolute inset-y-0 right-0" style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.45), transparent)' }} />
-        <motion.div
-          className="absolute inset-y-0 left-0"
-          style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(74,222,128,1), transparent)' }}
-          animate={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut', delay: delay }}
-        />
-        <motion.div
-          className="absolute inset-y-0 right-0"
-          style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(74,222,128,1), transparent)' }}
-          animate={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut', delay: delay + 0.3 }}
-        />
-        <motion.div
-          className="absolute inset-x-0"
-          style={{ height: 2, background: 'linear-gradient(to right, transparent, rgba(74,222,128,0.9), transparent)' }}
-          animate={{ top: ['0%', '100%'], opacity: [0, 1, 1, 0] }}
-          transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 2, ease: 'linear', delay: delay }}
-        />
-      </div>
+      {/* CC light sweep — a light that travels around the card's edges */}
+      <div className="border-chase" style={{ animationDelay: `${delay}s` }} />
 
-      <div className="aspect-[9/16] relative bg-bg-soft">
-        {hasVideo ? (
-          <iframe
-            className="w-full h-full"
-            src={`https://www.youtube.com/embed/${work.youtubeId}`}
-            title={work.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 purple-gradient">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden flex items-center justify-center bg-white/15 border border-white/25">
-              <motion.div
-                className="absolute inset-y-0 left-0"
-                style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent)' }}
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 5, ease: 'easeInOut' }}
-              />
-              <motion.div
-                className="absolute inset-y-0 right-0"
-                style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent)' }}
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 5, ease: 'easeInOut', delay: 0.15 }}
-              />
-              <Play className="w-6 h-6 text-white relative" />
+      <div className="rounded-2xl overflow-hidden bg-white">
+        <div className="aspect-[9/16] relative bg-bg-soft">
+          {hasVideo ? (
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${work.youtubeId}`}
+              title={work.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 purple-gradient">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden flex items-center justify-center bg-white/15 border border-white/25">
+                <motion.div
+                  className="absolute inset-y-0 left-0"
+                  style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent)' }}
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 5, ease: 'easeInOut' }}
+                />
+                <motion.div
+                  className="absolute inset-y-0 right-0"
+                  style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent)' }}
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 5, ease: 'easeInOut', delay: 0.15 }}
+                />
+                <Play className="w-6 h-6 text-white relative" />
+              </div>
+              <span className="text-xs font-bold text-white/70 flex items-center gap-1">
+                <Clock className="w-3 h-3" /> قريباً
+              </span>
             </div>
-            <span className="text-xs font-bold text-white/70 flex items-center gap-1">
-              <Clock className="w-3 h-3" /> قريباً
-            </span>
-          </div>
-        )}
-      </div>
-      <div className="p-4 text-right">
-        <h3 className="font-black text-ink text-base mb-1">{work.title}</h3>
-        <p className="text-xs font-bold" style={{ color: '#874AF8' }}>{work.category}</p>
+          )}
+        </div>
+        <div className="p-4 text-right">
+          <h3 className="font-black text-ink text-base mb-1">{work.title}</h3>
+          <p className="text-xs font-bold" style={{ color: '#874AF8' }}>{work.category}</p>
+        </div>
       </div>
     </motion.div>
   )
