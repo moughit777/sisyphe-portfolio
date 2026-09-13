@@ -25,20 +25,29 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
       className="relative card-hover rounded-2xl overflow-hidden bg-white"
+      style={{ boxShadow: '0 0 0 1px rgba(52,211,153,0.35), 0 0 18px rgba(52,211,153,0.18)' }}
     >
-      {/* CC light sweep frame — soft green edges around the video icon */}
+      {/* CC light sweep frame — soft green edges around the video icon, always faintly on + brighter pulse */}
       <div className="absolute inset-0 z-10 rounded-2xl pointer-events-none overflow-hidden">
+        <div className="absolute inset-y-0 left-0" style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.45), transparent)' }} />
+        <div className="absolute inset-y-0 right-0" style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.45), transparent)' }} />
         <motion.div
           className="absolute inset-y-0 left-0"
-          style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.9), transparent)' }}
+          style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(74,222,128,1), transparent)' }}
           animate={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 4 + delay, ease: 'easeInOut' }}
+          transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut', delay: delay }}
         />
         <motion.div
           className="absolute inset-y-0 right-0"
-          style={{ width: 2, background: 'linear-gradient(to bottom, transparent, rgba(52,211,153,0.9), transparent)' }}
+          style={{ width: 3, background: 'linear-gradient(to bottom, transparent, rgba(74,222,128,1), transparent)' }}
           animate={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 4 + delay, ease: 'easeInOut', delay: 0.2 }}
+          transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 1.8, ease: 'easeInOut', delay: delay + 0.3 }}
+        />
+        <motion.div
+          className="absolute inset-x-0"
+          style={{ height: 2, background: 'linear-gradient(to right, transparent, rgba(74,222,128,0.9), transparent)' }}
+          animate={{ top: ['0%', '100%'], opacity: [0, 1, 1, 0] }}
+          transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 2, ease: 'linear', delay: delay }}
         />
       </div>
 
