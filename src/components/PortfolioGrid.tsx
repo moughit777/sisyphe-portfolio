@@ -3,18 +3,16 @@ import { motion } from 'framer-motion'
 import { Play, Clock } from 'lucide-react'
 
 /*
-  TODO: عبي هاد اللائحة بالفيديوهات الحقيقية ديالك.
-  لكل عمل، خاصك تعطي youtubeId (آخر جزء من رابط يوتيوب، بعد v= أو بعد /).
-  مثال: https://www.youtube.com/watch?v=dQw4w9WgXcQ  →  youtubeId: 'dQw4w9WgXcQ'
-  اللي خاوي (youtubeId: '') غادي يبان كـ "قريباً".
+  TODO: بدل العناوين والفئات بلي كتناسب كل فيديو فعلاً (ما قدرتش نتفرج عليهم باش نعرف المحتوى بالضبط).
+  لكل عمل، خاصك تعطي youtubeId (آخر جزء من رابط يوتيوب، بعد v= أو بعد /shorts/).
 */
 const WORKS = [
-  { title: 'مونتاج طويل', category: 'Long-form Editing', youtubeId: '' },
-  { title: 'Motion Graphics', category: 'After Effects', youtubeId: '' },
-  { title: 'Reels & TikTok', category: 'Social Content', youtubeId: '' },
-  { title: 'Color Grading', category: 'تصحيح الألوان', youtubeId: '' },
-  { title: 'محتوى يوتيوب', category: 'YouTube Editing', youtubeId: '' },
-  { title: 'إعلان تجاري', category: 'Commercial', youtubeId: '' },
+  { title: 'مونتاج ريلز 1', category: 'Reels & Shorts', youtubeId: 'LbWCcnwGCFA' },
+  { title: 'مونتاج ريلز 2', category: 'Reels & Shorts', youtubeId: 'ykdvaLdvLiw' },
+  { title: 'مونتاج ريلز 3', category: 'Reels & Shorts', youtubeId: 'Fb24L2ZLs4U' },
+  { title: 'مونتاج ريلز 4', category: 'Reels & Shorts', youtubeId: 'Vm2lT5edDsQ' },
+  { title: 'مونتاج ريلز 5', category: 'Reels & Shorts', youtubeId: 'blKVJpLVoZc' },
+  { title: 'مونتاج ريلز 6', category: 'Reels & Shorts', youtubeId: 'MCWxVcKe4aU' },
 ]
 
 function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
@@ -28,7 +26,7 @@ function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
       className="card-hover rounded-2xl overflow-hidden bg-white"
     >
-      <div className="aspect-video relative bg-bg-soft">
+      <div className="aspect-[9/16] relative bg-bg-soft">
         {hasVideo ? (
           <iframe
             className="w-full h-full"
@@ -86,7 +84,7 @@ export default function PortfolioGrid() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {WORKS.map((w, i) => (
             <WorkCard key={w.title} work={w} delay={i * 0.08} />
           ))}
