@@ -8,8 +8,8 @@ const WA_URL = (plan: string) =>
 const PLANS = [
   {
     name: 'الباقة الخاطفة',
-    price: '14',
-    currency: '$',
+    price: '140',
+    currency: 'درهم',
     gradient: 'linear-gradient(135deg, #0891B2 0%, #22D3EE 50%, #67E8F9 100%)',
     features: [
       'كابشن احترافي على الفيديو',
