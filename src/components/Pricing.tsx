@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Check, MessageCircle } from 'lucide-react'
+import { Check, MessageCircle, AlertTriangle } from 'lucide-react'
 
 const WA_URL = (plan: string) =>
   `https://wa.me/212624821600?text=السلام%20عليكم%2C%20بغيت%20نطلب%20${encodeURIComponent(plan)}`
@@ -16,7 +16,7 @@ const PLANS = [
       'مونتاج نقي (تقطيع، ترتيب، انتقالات ناعمة)',
       '2 تعديلات مجانية',
     ],
-    note: '',
+    note: 'أي تعديل إضافي يُحتسب منفصلًا',
     featured: false,
   },
   {
@@ -103,15 +103,15 @@ export default function Pricing() {
                 </div>
               )}
 
-              <h3 className="font-black text-lg sm:text-xl mb-1 mt-6 relative">{plan.name}</h3>
-              <div className="flex items-baseline gap-1.5 mb-6 relative">
+              <h3 className="font-black text-lg sm:text-xl mb-1 mt-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>{plan.name}</h3>
+              <div className="flex items-baseline gap-1.5 mb-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>
                 <span className="text-4xl font-black">{plan.price}</span>
                 <span className="text-sm font-bold opacity-80">{plan.currency}</span>
               </div>
 
               <ul className="space-y-3 mb-8 relative flex-1">
                 {plan.features.map(f => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm font-semibold leading-snug">
+                  <li key={f} className="flex items-start gap-2.5 text-sm font-semibold leading-snug" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>
                     <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3" />
                     </span>
@@ -121,8 +121,10 @@ export default function Pricing() {
               </ul>
 
               {plan.note && (
-                <p className="text-xs font-bold mb-6 relative px-3 py-2 rounded-lg bg-black/20 text-white">
-                  ⚠ {plan.note}
+                <p className="text-xs font-bold mb-6 relative px-3 py-2 rounded-lg bg-black/25 text-white flex items-center gap-2"
+                  style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
+                  <AlertTriangle className="w-4 h-4 flex-shrink-0" style={{ color: '#ff3b3b' }} fill="#ff3b3b" fillOpacity={0.15} />
+                  {plan.note}
                 </p>
               )}
 
