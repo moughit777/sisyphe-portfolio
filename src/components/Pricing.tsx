@@ -7,6 +7,20 @@ const WA_URL = (plan: string) =>
 
 const PLANS = [
   {
+    name: 'الباقة الخاطفة',
+    price: '14',
+    currency: '$',
+    gradient: 'linear-gradient(135deg, #0891B2 0%, #22D3EE 50%, #67E8F9 100%)',
+    features: [
+      'مونتاج سريع وبسيط',
+      'كابشن احترافي على الفيديو',
+      'تسليم خلال 24 ساعة',
+      'ريفيزيون وحدة داخلة',
+    ],
+    note: 'أي تعديل إضافي يُحتسب منفصلًا',
+    featured: false,
+  },
+  {
     name: 'الباقة الأساسية',
     price: '249',
     currency: 'MAD',
@@ -55,7 +69,7 @@ export default function Pricing() {
           <p className="text-gray">اختار وخلي المونتاج علينا حنا</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
           {PLANS.map((plan, i) => (
             <motion.div
               key={plan.name}
