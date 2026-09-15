@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { ArrowLeft, MessageCircle, Film, Layers, Sparkles } from 'lucide-react'
+import { ArrowLeft, MessageCircle, Film, Layers, Sparkles, Play } from 'lucide-react'
 
 const WA_URL = 'https://wa.me/212624821600?text=السلام%20عليكم%2C%20شفت%20البورتفوليو%20ديالك%20وبغيت%20نهضر%20معاك%20على%20شي%20مشروع'
 
@@ -70,10 +70,15 @@ export default function Hero() {
               </motion.div>
             </motion.a>
 
-            <a href="#work"
+            <motion.a href="#work"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
               className="btn-whatsapp flex items-center gap-2 px-8 py-4 rounded-2xl text-base">
+              <motion.div animate={{ scale: [1, 1.18, 1] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
+                <Play className="w-5 h-5" fill="currentColor" />
+              </motion.div>
               شوف الأعمال ديالي
-            </a>
+            </motion.a>
           </motion.div>
 
         </motion.div>
