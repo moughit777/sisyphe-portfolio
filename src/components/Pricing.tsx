@@ -121,9 +121,12 @@ export default function Pricing() {
               </ul>
 
               {plan.note && (
-                <p className="text-xs font-bold mb-6 relative px-3 py-2 rounded-lg bg-black/25 text-white flex items-center gap-2"
+                <p className="text-xs font-bold mb-6 relative px-3 py-2 rounded-lg bg-black/25 text-white flex items-center gap-2.5"
                   style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
-                  <AlertTriangle className="w-4 h-4 flex-shrink-0" style={{ color: '#ff3b3b' }} fill="#ff3b3b" fillOpacity={0.15} />
+                  <span className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ background: '#ff3b3b', boxShadow: '0 0 0 3px rgba(255,59,59,0.25)' }}>
+                    <AlertTriangle className="w-3.5 h-3.5 text-white" strokeWidth={2.75} />
+                  </span>
                   {plan.note}
                 </p>
               )}
