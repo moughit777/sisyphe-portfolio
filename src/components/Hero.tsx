@@ -41,15 +41,15 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="text-lg sm:text-xl text-gray max-w-xl mx-auto leading-relaxed mb-10">
-            مونتاج احترافي بـ <span className="text-ink font-semibold">Premiere Pro</span> و<span className="text-ink font-semibold">After Effects</span> — من الفكرة الخام حتى فيديو جاهز يبيع
+            متخصص فمونتاج <span className="text-ink font-semibold">Reels</span> بـ <span className="text-ink font-semibold">Premiere Pro</span> و<span className="text-ink font-semibold">After Effects</span> — من الفكرة الخام حتى فيديو يوقف السكرول
           </motion.p>
 
           <motion.div variants={item} className="flex items-center justify-center gap-4 flex-wrap text-sm mb-10 text-gray font-semibold">
+            <span className="flex items-center gap-1.5"><Sparkles className="w-4 h-4" style={{ color: '#874AF8' }} /> Reels &amp; TikTok</span>
+            <span className="w-px h-4 bg-border" />
             <span className="flex items-center gap-1.5"><Film className="w-4 h-4" style={{ color: '#874AF8' }} /> مونتاج طويل</span>
             <span className="w-px h-4 bg-border" />
             <span className="flex items-center gap-1.5"><Layers className="w-4 h-4" style={{ color: '#874AF8' }} /> Motion Graphics</span>
-            <span className="w-px h-4 bg-border" />
-            <span className="flex items-center gap-1.5"><Sparkles className="w-4 h-4" style={{ color: '#874AF8' }} /> Reels &amp; TikTok</span>
           </motion.div>
 
           <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-3">

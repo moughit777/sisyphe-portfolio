@@ -8,7 +8,7 @@ const WA_URL = (plan: string) =>
 const PLANS = [
   {
     name: 'باقة المونتاج البسيط',
-    price: '140',
+    price: '228',
     currency: 'DH',
     gradient: 'linear-gradient(135deg, #0891B2 0%, #22D3EE 50%, #67E8F9 100%)',
     features: [
@@ -20,7 +20,7 @@ const PLANS = [
   },
   {
     name: 'الباقة الأساسية',
-    price: '249',
+    price: '299',
     currency: 'DH',
     gradient: 'linear-gradient(135deg, #4E2A8C 7%, #941C66 32%, #CD2236 57%, #F17422 75%, #F7B14E 92%)',
     features: [
