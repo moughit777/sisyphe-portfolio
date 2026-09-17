@@ -37,9 +37,9 @@ export default function Navbar() {
 
           <a href="#hero" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-              <Image src="/logo.png" alt="Sisyphe" width={40} height={40} className="w-full h-full object-cover object-left" priority />
+              <Image src="/logo.png" alt="Sisyphlab" width={40} height={40} className="w-full h-full object-cover object-left" priority />
             </div>
-            <span className="font-black text-ink text-lg tracking-tight">Sisyphe</span>
+            <span className="font-black text-ink text-lg tracking-tight">Sisyphlab</span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-0.5">

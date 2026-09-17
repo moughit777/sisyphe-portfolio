@@ -10,8 +10,8 @@ const ibmPlex = IBM_Plex_Sans_Arabic({
 })
 
 export const metadata: Metadata = {
-  title: 'Sisyphe | مونتير فيديو محترف',
-  description: 'Sisyphe — مونتاج فيديو احترافي، Reels، Motion Graphics، وتحرير محتوى للسوشيال ميديا.',
+  title: 'Sisyphlab | مونتير فيديو محترف',
+  description: 'Sisyphlab — مونتاج فيديو احترافي، Reels، Motion Graphics، وتحرير محتوى للسوشيال ميديا.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

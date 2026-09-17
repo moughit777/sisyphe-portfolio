@@ -6,11 +6,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
-            <Image src="/logo.png" alt="Sisyphe" width={32} height={32} className="w-full h-full object-cover object-left" />
+            <Image src="/logo.png" alt="Sisyphlab" width={32} height={32} className="w-full h-full object-cover object-left" />
           </div>
-          <span className="font-black text-ink text-sm">Sisyphe</span>
+          <span className="font-black text-ink text-sm">Sisyphlab</span>
         </div>
-        <p className="text-xs text-gray">© {new Date().getFullYear()} Sisyphe — جميع الحقوق محفوظة</p>
+        <p className="text-xs text-gray">© {new Date().getFullYear()} Sisyphlab — جميع الحقوق محفوظة</p>
       </div>
     </footer>
   )
