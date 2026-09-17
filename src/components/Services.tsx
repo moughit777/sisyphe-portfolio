@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Film, Layers, Smartphone, Wand2, Monitor, Zap } from 'lucide-react'
+import { Film, Layers, Smartphone, Wand2, Zap } from 'lucide-react'
 import IconBadge from './IconBadge'
 
 const SERVICES = [
@@ -8,7 +8,6 @@ const SERVICES = [
   { icon: Layers,     title: 'Motion Graphics',       desc: 'تصميم حركي وتأثيرات بصرية احترافية بـ After Effects' },
   { icon: Smartphone, title: 'Reels & TikTok',        desc: 'محتوى قصير جذاب مصمم خصيصاً لمنصات السوشيال ميديا' },
   { icon: Wand2,      title: 'Color Grading',         desc: 'تصحيح وتدرج الألوان لإعطاء الفيديو مظهر احترافي وسينمائي' },
-  { icon: Monitor,    title: 'محتوى يوتيوب',          desc: 'مونتاج فيديوهات يوتيوب من البداية للنهاية جاهزة للنشر' },
   { icon: Zap,        title: 'تسليم سريع',            desc: 'التزام بالمواعيد وتواصل مستمر معاك طول مدة المشروع' },
 ]
 

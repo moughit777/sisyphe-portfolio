@@ -116,6 +116,7 @@ export default function Pricing() {
               )}
 
               <h3 className="font-black text-lg sm:text-xl mb-1 mt-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>{plan.name}</h3>
+              <p className="text-xs font-bold mb-4 relative opacity-90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>متخصص فمونتاج Reels</p>
               <div className="flex items-baseline gap-1.5 mb-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>
                 <span className="text-4xl font-black">{plan.price}</span>
                 <span className="text-sm font-bold opacity-80">{plan.currency}</span>
