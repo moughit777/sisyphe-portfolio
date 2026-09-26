@@ -7,16 +7,16 @@ import { Play, Clock } from 'lucide-react'
   لكل عمل، خاصك تعطي youtubeId (آخر جزء من رابط يوتيوب، بعد v= أو بعد /shorts/).
 */
 const WORKS = [
-  { title: 'مونتاج ريلز 1', category: 'Reels & Shorts', youtubeId: 'LbWCcnwGCFA' },
-  { title: 'مونتاج ريلز 2', category: 'Reels & Shorts', youtubeId: 'ykdvaLdvLiw' },
-  { title: 'مونتاج ريلز 3', category: 'Reels & Shorts', youtubeId: 'Fb24L2ZLs4U' },
-  { title: 'مونتاج ريلز 4', category: 'Reels & Shorts', youtubeId: 'Vm2lT5edDsQ' },
-  { title: 'مونتاج ريلز 5', category: 'Reels & Shorts', youtubeId: 'blKVJpLVoZc' },
-  { title: 'مونتاج ريلز 6', category: 'Reels & Shorts', youtubeId: 'MCWxVcKe4aU' },
-  { title: 'مونتاج ريلز 7', category: 'Reels & Shorts', youtubeId: '-QPO2R-fYxY' },
-  { title: 'مونتاج ريلز 8', category: 'Reels & Shorts', youtubeId: 'pHb5KDUPPX8' },
-  { title: 'مونتاج ريلز 9', category: 'Reels & Shorts', youtubeId: 'rXmZXCcUBKQ' },
-  { title: 'مونتاج ريلز 10', category: 'Reels & Shorts', youtubeId: 'lk94JhIE9kA' },
+  { title: 'مونتاج ريلز 1', category: 'Reels & Shorts', youtubeId: 'rXmZXCcUBKQ' },
+  { title: 'مونتاج ريلز 2', category: 'Reels & Shorts', youtubeId: 'LbWCcnwGCFA' },
+  { title: 'مونتاج ريلز 3', category: 'Reels & Shorts', youtubeId: '-QPO2R-fYxY' },
+  { title: 'مونتاج ريلز 4', category: 'Reels & Shorts', youtubeId: 'ykdvaLdvLiw' },
+  { title: 'مونتاج ريلز 5', category: 'Reels & Shorts', youtubeId: 'lk94JhIE9kA' },
+  { title: 'مونتاج ريلز 6', category: 'Reels & Shorts', youtubeId: 'Fb24L2ZLs4U' },
+  { title: 'مونتاج ريلز 7', category: 'Reels & Shorts', youtubeId: 'pHb5KDUPPX8' },
+  { title: 'مونتاج ريلز 8', category: 'Reels & Shorts', youtubeId: 'Vm2lT5edDsQ' },
+  { title: 'مونتاج ريلز 9', category: 'Reels & Shorts', youtubeId: 'blKVJpLVoZc' },
+  { title: 'مونتاج ريلز 10', category: 'Reels & Shorts', youtubeId: 'MCWxVcKe4aU' },
 ]
 
 function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {
