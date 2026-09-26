@@ -13,6 +13,10 @@ const WORKS = [
   { title: 'مونتاج ريلز 4', category: 'Reels & Shorts', youtubeId: 'Vm2lT5edDsQ' },
   { title: 'مونتاج ريلز 5', category: 'Reels & Shorts', youtubeId: 'blKVJpLVoZc' },
   { title: 'مونتاج ريلز 6', category: 'Reels & Shorts', youtubeId: 'MCWxVcKe4aU' },
+  { title: 'مونتاج ريلز 7', category: 'Reels & Shorts', youtubeId: '-QPO2R-fYxY' },
+  { title: 'مونتاج ريلز 8', category: 'Reels & Shorts', youtubeId: 'pHb5KDUPPX8' },
+  { title: 'مونتاج ريلز 9', category: 'Reels & Shorts', youtubeId: 'rXmZXCcUBKQ' },
+  { title: 'مونتاج ريلز 10', category: 'Reels & Shorts', youtubeId: 'lk94JhIE9kA' },
 ]
 
 function WorkCard({ work, delay }: { work: typeof WORKS[0]; delay: number }) {

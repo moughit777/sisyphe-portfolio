@@ -8,7 +8,7 @@ const WA_URL = (plan: string) =>
 const PLANS = [
   {
     name: 'باقة المونتاج البسيط',
-    price: '228',
+    price: '320',
     currency: 'DH',
     gradient: 'linear-gradient(135deg, #0891B2 0%, #22D3EE 50%, #67E8F9 100%)',
     features: [
@@ -20,7 +20,7 @@ const PLANS = [
   },
   {
     name: 'الباقة الأساسية',
-    price: '299',
+    price: '429',
     currency: 'DH',
     gradient: 'linear-gradient(135deg, #4E2A8C 7%, #941C66 32%, #CD2236 57%, #F17422 75%, #F7B14E 92%)',
     features: [
@@ -33,7 +33,7 @@ const PLANS = [
   },
   {
     name: 'الباقة المميّزة',
-    price: '679',
+    price: '879',
     currency: 'DH',
     gradient: 'linear-gradient(135deg, #6B3FD9 0%, #874AF8 50%, #9B6BFF 100%)',
     features: [
@@ -85,7 +85,7 @@ export default function Pricing() {
               whileHover={{ rotate: 0, scale: 1.03, y: -6 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="relative rounded-3xl p-8 text-white overflow-hidden shadow-xl cursor-pointer h-full flex flex-col"
+              className="relative rounded-3xl p-5 sm:p-8 text-white overflow-hidden shadow-xl cursor-pointer h-full flex flex-col max-w-sm mx-auto sm:max-w-none w-full"
               style={{ background: plan.gradient }}
             >
               {/* CC light sweep — soft diagonal pass */}
@@ -110,23 +110,23 @@ export default function Pricing() {
               />
 
               {plan.featured && (
-                <div className="absolute top-5 left-5 px-3 py-1 rounded-full text-xs font-black bg-white/20 backdrop-blur-sm border border-white/30">
+                <div className="absolute top-3 sm:top-5 left-3 sm:left-5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-black bg-white/20 backdrop-blur-sm border border-white/30">
                   الأكثر طلباً
                 </div>
               )}
 
-              <h3 className="font-black text-lg sm:text-xl mb-1 mt-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>{plan.name}</h3>
-              <p className="text-xs font-bold mb-4 relative opacity-90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>متخصص فمونتاج Reels</p>
-              <div className="flex items-baseline gap-1.5 mb-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>
-                <span className="text-4xl font-black">{plan.price}</span>
-                <span className="text-sm font-bold opacity-80">{plan.currency}</span>
+              <h3 className="font-black text-base sm:text-xl mb-1 mt-5 sm:mt-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>{plan.name}</h3>
+              <p className="text-[11px] sm:text-xs font-bold mb-3 sm:mb-4 relative opacity-90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>متخصص فمونتاج Reels</p>
+              <div className="flex items-baseline gap-1.5 mb-4 sm:mb-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>
+                <span className="text-2xl sm:text-4xl font-black">{plan.price}</span>
+                <span className="text-xs sm:text-sm font-bold opacity-80">{plan.currency}</span>
               </div>
 
-              <ul className="space-y-3 mb-8 relative flex-1">
+              <ul className="space-y-2 sm:space-y-3 mb-5 sm:mb-8 relative flex-1">
                 {plan.features.map(f => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm font-semibold leading-snug" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>
-                    <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3" />
+                  <li key={f} className="flex items-start gap-2 sm:gap-2.5 text-xs sm:text-sm font-semibold leading-snug" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>
+                    <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                     </span>
                     {f}
                   </li>
@@ -134,11 +134,11 @@ export default function Pricing() {
               </ul>
 
               {plan.note && (
-                <p className="text-xs font-bold mb-6 relative px-3 py-2 rounded-lg bg-black/25 text-white flex items-center gap-2.5"
+                <p className="text-[10px] sm:text-xs font-bold mb-4 sm:mb-6 relative px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-black/25 text-white flex items-center gap-2 sm:gap-2.5"
                   style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
-                  <span className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{ background: '#ff3b3b', boxShadow: '0 0 0 3px rgba(255,59,59,0.25)' }}>
-                    <AlertTriangle className="w-3.5 h-3.5 text-white" strokeWidth={2.75} />
+                    <AlertTriangle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" strokeWidth={2.75} />
                   </span>
                   {plan.note}
                 </p>
