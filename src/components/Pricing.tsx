@@ -8,8 +8,8 @@ const WA_URL = (plan: string) =>
 const PLANS = [
   {
     name: 'باقة المونتاج البسيط',
-    price: '35',
-    currency: 'USD',
+    priceDh: '320',
+    priceUsd: '35',
     gradient: 'linear-gradient(135deg, #0891B2 0%, #22D3EE 50%, #67E8F9 100%)',
     features: [
       'كابشن احترافي على الفيديو',
@@ -20,8 +20,8 @@ const PLANS = [
   },
   {
     name: 'الباقة الأساسية',
-    price: '45',
-    currency: 'USD',
+    priceDh: '429',
+    priceUsd: '45',
     gradient: 'linear-gradient(135deg, #4E2A8C 7%, #941C66 32%, #CD2236 57%, #F17422 75%, #F7B14E 92%)',
     features: [
       'موسيقى خلفية بلا حقوق',
@@ -33,8 +33,8 @@ const PLANS = [
   },
   {
     name: 'الباقة المميّزة',
-    price: '95',
-    currency: 'USD',
+    priceDh: '879',
+    priceUsd: '95',
     gradient: 'linear-gradient(135deg, #6B3FD9 0%, #874AF8 50%, #9B6BFF 100%)',
     features: [
       'أقل من 60 ثانية',
@@ -118,8 +118,12 @@ export default function Pricing() {
               <h3 className="font-black text-base sm:text-xl mb-1 mt-5 sm:mt-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>{plan.name}</h3>
               <p className="text-[11px] sm:text-xs font-bold mb-3 sm:mb-4 relative opacity-90" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>متخصص فمونتاج Reels</p>
               <div className="flex items-baseline gap-1.5 mb-4 sm:mb-6 relative" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.45)' }}>
-                <span className="text-2xl sm:text-4xl font-black">{plan.price}</span>
-                <span className="text-xs sm:text-sm font-bold opacity-80">{plan.currency}</span>
+                <span dir="ltr" className="flex items-baseline gap-1.5 flex-wrap">
+                  <span className="text-2xl sm:text-4xl font-black">{plan.priceDh}</span>
+                  <span className="text-xs sm:text-sm font-bold opacity-80">DH</span>
+                  <span className="mx-1 text-lg sm:text-2xl font-bold opacity-50">/</span>
+                  <span className="text-2xl sm:text-4xl font-black">${plan.priceUsd}</span>
+                </span>
               </div>
 
               <ul className="space-y-2 sm:space-y-3 mb-5 sm:mb-8 relative flex-1">
