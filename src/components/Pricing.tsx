@@ -8,8 +8,8 @@ const WA_URL = (plan: string) =>
 const PLANS = [
   {
     name: 'باقة المونتاج البسيط',
-    price: '320',
-    currency: 'DH',
+    price: '35',
+    currency: 'USD',
     gradient: 'linear-gradient(135deg, #0891B2 0%, #22D3EE 50%, #67E8F9 100%)',
     features: [
       'كابشن احترافي على الفيديو',
@@ -20,8 +20,8 @@ const PLANS = [
   },
   {
     name: 'الباقة الأساسية',
-    price: '429',
-    currency: 'DH',
+    price: '45',
+    currency: 'USD',
     gradient: 'linear-gradient(135deg, #4E2A8C 7%, #941C66 32%, #CD2236 57%, #F17422 75%, #F7B14E 92%)',
     features: [
       'موسيقى خلفية بلا حقوق',
@@ -33,8 +33,8 @@ const PLANS = [
   },
   {
     name: 'الباقة المميّزة',
-    price: '879',
-    currency: 'DH',
+    price: '95',
+    currency: 'USD',
     gradient: 'linear-gradient(135deg, #6B3FD9 0%, #874AF8 50%, #9B6BFF 100%)',
     features: [
       'أقل من 60 ثانية',
